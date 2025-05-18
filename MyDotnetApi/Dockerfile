@@ -12,7 +12,7 @@ WORKDIR /src
 COPY ["MyDotnetApi.csproj", "MyDotnetApi/"]
 RUN dotnet restore "./MyDotnetApi/./MyDotnetApi.csproj"
 COPY . .
-WORKDIR "/src/MyDotnetApi"
+WORKDIR "/MyDotnetApi"
 RUN dotnet build "./MyDotnetApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
