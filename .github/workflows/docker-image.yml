@@ -23,7 +23,7 @@ jobs:
 
     - name: 🛠 Build .NET backend image
       run: |
-        docker build -t $DOCKER_USERNAME/mydotnetapi ./mydotnetapi
+        docker build -t $DOCKER_USERNAME/mydotnetapi ./MyDotnetApi
   
 
     - name: 🛠 Build Angular frontend image
