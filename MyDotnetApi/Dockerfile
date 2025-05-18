@@ -10,10 +10,10 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["mydotnetapi.csproj", "mydotnetapi/"]
-RUN dotnet restore "./mydotnetapi/./mydotnetapi.csproj"
+RUN dotnet restore "./mydotnetapi/./MyDotnetApi.csproj"
 COPY . .
 WORKDIR "/mydotnetapi"
-RUN dotnet build "./mydotnetapi.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./MyDotnetApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
