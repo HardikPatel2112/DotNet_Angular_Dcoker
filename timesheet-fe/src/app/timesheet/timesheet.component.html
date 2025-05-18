@@ -1,0 +1,73 @@
+<div class="container mt-5">
+  <h2 class="mb-4 text-center">🕒 Timesheet Entry</h2>
+
+  <form [formGroup]="timesheetForm" (ngSubmit)="submit()" class="card p-4 shadow-sm bg-light rounded">
+   <div class="mb-3 row">
+  <div class="col-md-4">
+    <label class="form-label">Date</label>
+    <input type="date" class="form-control" formControlName="date" required />
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">Start Time</label>
+    <input type="time" class="form-control" formControlName="startTime" step="1" required />
+  </div>
+  <div class="col-md-4">
+    <label class="form-label">End Time</label>
+    <input type="time" class="form-control" formControlName="endTime" step="1" required />
+  </div>
+</div>
+    <div class="mb-3">
+      <label class="form-label">Project Name</label>
+      <input type="text" class="form-control" formControlName="projectName" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Task</label>
+      <input type="text" class="form-control" formControlName="task" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Remarks</label>
+      <textarea class="form-control" formControlName="remarks" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Submit</button>
+  </form>
+
+  <hr class="my-5" />
+
+  <div *ngIf="entries.length > 0" class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>Date</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Project</th>
+          <th>Task</th>
+          <th>Remarks</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of entries">
+          <td>{{ entry.date }}</td>
+          <td>{{ entry.startTime }}</td>
+          <td>{{ entry.endTime }}</td>
+          <td>{{ entry.projectName }}</td>
+          <td>{{ entry.task }}</td>
+          <td>{{ entry.remarks }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="deleteEntry(entry.id!)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="entries.length === 0" class="text-center text-muted mt-4">
+    No timesheet entries yet.
+  </div>
+</div>
