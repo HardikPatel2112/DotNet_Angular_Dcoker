@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Hardik\\Projects\\DotNet_Angular_Dcoker\\MyDotnetApi\\MyDotnetApi\\MyDotnetApi\\MyDotnetApi.csproj": {}
+    "D:\\Hardik\\Projects\\DotNet_Angular_Dcoker\\DotNet_Angular_Dcoker\\MyDotnetApi\\MyDotnetApi.csproj": {}
   },
   "projects": {
-    "D:\\Hardik\\Projects\\DotNet_Angular_Dcoker\\MyDotnetApi\\MyDotnetApi\\MyDotnetApi\\MyDotnetApi.csproj": {
+    "D:\\Hardik\\Projects\\DotNet_Angular_Dcoker\\DotNet_Angular_Dcoker\\MyDotnetApi\\MyDotnetApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Hardik\\Projects\\DotNet_Angular_Dcoker\\MyDotnetApi\\MyDotnetApi\\MyDotnetApi\\MyDotnetApi.csproj",
+        "projectUniqueName": "D:\\Hardik\\Projects\\DotNet_Angular_Dcoker\\DotNet_Angular_Dcoker\\MyDotnetApi\\MyDotnetApi.csproj",
         "projectName": "MyDotnetApi",
-        "projectPath": "D:\\Hardik\\Projects\\DotNet_Angular_Dcoker\\MyDotnetApi\\MyDotnetApi\\MyDotnetApi\\MyDotnetApi.csproj",
+        "projectPath": "D:\\Hardik\\Projects\\DotNet_Angular_Dcoker\\DotNet_Angular_Dcoker\\MyDotnetApi\\MyDotnetApi.csproj",
         "packagesPath": "C:\\Users\\BAPS\\.nuget\\packages\\",
-        "outputPath": "D:\\Hardik\\Projects\\DotNet_Angular_Dcoker\\MyDotnetApi\\MyDotnetApi\\MyDotnetApi\\obj\\",
+        "outputPath": "D:\\Hardik\\Projects\\DotNet_Angular_Dcoker\\DotNet_Angular_Dcoker\\MyDotnetApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
