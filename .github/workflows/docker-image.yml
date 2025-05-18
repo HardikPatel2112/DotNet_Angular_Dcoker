@@ -21,6 +21,9 @@ jobs:
     - name: 🔐 Docker login
       run: echo "${{ env.DOCKER_PASSWORD }}" | docker login -u "${{ env.DOCKER_USERNAME }}" --password-stdin
 
+    - name: 🛠 Build .NET backend image
+      run: |
+        docker build -t $DOCKER_USERNAME/mydotnetapi ./MyDotnetApi
   
 
     - name: 🛠 Build Angular frontend image
@@ -29,10 +32,6 @@ jobs:
 
     - name: 📤 Push Angular image
       run: docker push $DOCKER_USERNAME/timesheet-fe
-
-    - name: 🛠 Build .NET backend image
-      run: |
-        docker build -t $DOCKER_USERNAME/mydotnetapi ./MyDotnetApi
 
     - name: 📤 Push .NET image
       run: docker push $DOCKER_USERNAME/mMyDotnetApi
